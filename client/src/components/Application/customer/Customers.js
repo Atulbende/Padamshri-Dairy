@@ -19,7 +19,7 @@ export default function Customers() {
       { title : 'Qty',data:'Qty', 'visible' : true },
       { title : 'Rate',data:'Rate', 'visible' : true },
       { title : 'Balance',data:'Balance', 'visible' : true },
-      { title : 'Delivery By',data:'DeliveryBy', 'visible' : true },
+      { title : 'Delivery Boy',data:'DeliveryBy', 'visible' : true },
       { title : 'Timing',data:'Timing', 'visible' : true },
       { title : 'Last Payment Date',data:'LastPaymentDate', 'visible' : true },
       { title : 'Status',data:'Status', 'visible' : true }

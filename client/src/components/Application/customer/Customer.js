@@ -43,7 +43,7 @@ const actions=[{"title":'Save',"icon":'fa fa-check',"className":'btn-1',"action"
       <NumberFields  onChangeEvent={setCustomer} val={customer?.Balance} label='Balance' id='Balance' col='col-33'/> 
       <SelectFields onChangeEvent={setCustomer}  val={customer?.MilkType} options={MilkTypeOptoins} label='MilkType' id='MilkType' col='col-50'></SelectFields>
       <SelectFields onChangeEvent={setCustomer}  val={customer?.Timing} options={Timingoptions} label='Timing' id='Timing' col='col-50'></SelectFields>
-      <SelectFields  onChangeEvent={setCustomer}  val={customer?.DeliveryBy} listKey='users' label='DeliveryBy' id='DeliveryBy' col='col-33'></SelectFields>
+      <SelectFields  onChangeEvent={setCustomer}  val={customer?.DeliveryBy} listKey='users' label='Delivery Boy' id='DeliveryBy' col='col-33'></SelectFields>
       <DateTimePickerField  onChangeEvent={setCustomer} val={customer?.LastPaymentDate} label='Last Payment Date' id='LastPaymentDate' col='col-33'></DateTimePickerField>
       <SelectFields onChangeEvent={setCustomer}  val={customer?.Status} options={Statusoptions} label='Status' id='Status' col='col-33'></SelectFields>
    
