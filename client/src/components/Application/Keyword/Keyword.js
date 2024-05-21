@@ -1,9 +1,5 @@
 import {useRef,React} from 'react'
-import TextFields from '../../common/text-field/TextFields'
 import ActionBar from '../../layout/actionbar/ActionBar'
-import Dialog from '../../common/dialog/Dialog';
-import Checkbox from '../../common/checkbox/Checkbox';
-import SelectFields from '../../common/select-field/SelectFields'
 import Grid from '../../common/dataTable/Grid';
 export default function Keyword() {
   const BtnRef=useRef()

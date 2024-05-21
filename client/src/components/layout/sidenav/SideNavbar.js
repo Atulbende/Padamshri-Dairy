@@ -9,7 +9,7 @@ export default function SideNavbar() {
     return Menu.map((val, index) => {
       return (<SideBar  key={index} i={index} Lable={val.title} Link={val.link} icon={val.icon} Access={val.access}  subMenu={val.subMenu}></SideBar>);
    })
-  },[Menu])
+  },[])
   return (
     <div className={`sidebar  ${toggleSidebar}`}>  
         {SideBarContent}

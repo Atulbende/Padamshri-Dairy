@@ -24,7 +24,7 @@ export const Screen={
                     Def7:'Record Already Exist',
             },
             Info:function (Msg,Time){
-                    toast.info(Msg, {position: "button-right", autoClose: Time,hideProgressBar: false,
+                    toast.info(Msg, {position: "center", autoClose: Time,hideProgressBar: false,
                             closeOnClick: true,
                             pauseOnHover: true,
                             draggable: true,
@@ -33,7 +33,7 @@ export const Screen={
                             });
                     },
             Error:function(Msg,Time){
-                    toast.error(Msg, { position: "bottom-right",autoClose: Time, hideProgressBar: false,
+                    toast.error(Msg, { position: "top-right",autoClose: Time, hideProgressBar: false,
                             closeOnClick: true,
                             pauseOnHover: true,
                             draggable: true,
@@ -43,7 +43,7 @@ export const Screen={
                             });
             },
             Warm:function(Msg,Time){
-                    toast.warn(Msg, {position: "bottom-right", autoClose: Time,
+                    toast.warn(Msg, {position: "top-right", autoClose: Time,
                             hideProgressBar: false,
                             closeOnClick: true, 
                             pauseOnHover: true,
@@ -54,7 +54,7 @@ export const Screen={
     
             },
             Success:function(Msg,Time){
-                    toast.success(Msg, {position: "bottom-right", autoClose: Time,
+                    toast.success(Msg, {position: "top-right", autoClose: Time,
                             hideProgressBar: false,
                             closeOnClick: true,
                             pauseOnHover: true,

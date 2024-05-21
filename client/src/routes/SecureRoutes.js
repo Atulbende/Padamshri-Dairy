@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from 'react'
+import React, {  useEffect } from 'react'
 import { GerRouter } from '../components/layout/sidenav/MenuList'
 import ActionBar from '../components/layout/actionbar/ActionBar'
 import SideNavbar from '../components/layout/sidenav/SideNavbar'

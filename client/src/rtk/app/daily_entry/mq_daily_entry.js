@@ -14,9 +14,18 @@ const mq_daily_entry=apiSlice.injectEndpoints({
                 url:app.dailysale.app_dailyEntriesSave,
                 method:'POST',
                 data:data
-            })
+            }),
+            invalidatesTags:['customers']
+        }),
+        dailyEntryDelete:build.mutation({
+            query:(data)=>({
+                url:app.dailysale.app_dailyEntriesDelete,
+                method:'POST',
+                data:data
+            }),
+            invalidatesTags:['customers']
         })
            
     })
 })
-export const {useDailyEnteisMutation,useDailyEntrySaveMutation}=mq_daily_entry;
+export const {useDailyEnteisMutation,useDailyEntrySaveMutation,useDailyEntryDeleteMutation}=mq_daily_entry;

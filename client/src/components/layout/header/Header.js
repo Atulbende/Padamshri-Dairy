@@ -1,8 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, {  useState } from 'react';
 import {toggleSidebar} from '../../../redux/reducers/uiSlice';
 import {useDispatch,useSelector} from 'react-redux';
 import {Dialog,DialogHeader,DialogBody,DialogFooter} from '../../common/dialog/Dialog'
-import TextFields from '../../common/text-field/TextFields' 
 import { Screen } from '../../common/notifications/toastify';
 import Button from '../../common/button/Button';
 import './header.css'
@@ -15,14 +14,14 @@ export default function Header() {
   const navigate=useNavigate()
   const [toggleIcon,setToggleIcon]=useState('fa-solid fa-bars');
   const [isSetting,setIsSetting]=useState(false);
-  const [UserLogout,{data:isLogout}]=useUserLogoutMutation();
+  const [UserLogout]=useUserLogoutMutation();
   const Dispatch=useDispatch();
   const {shopId}=useSelector((state)=>state.appControls);
   const [IsPopup,SetIsPopup]=useState(false);
   const [IsShopPopup,SetIsShopPopup]=useState(false);
   const handleToggle=()=>{
     Dispatch(toggleSidebar());
-    setToggleIcon(toggleIcon=='fa-solid fa-bars'?'fa-sharp fa-solid fa-xmark fa-fade':'fa-solid fa-bars');
+    setToggleIcon(toggleIcon==='fa-solid fa-bars'?'fa-sharp fa-solid fa-xmark fa-fade':'fa-solid fa-bars');
   }
   const handleShopBtn=(id)=>{
     Dispatch(setShop({'shopId':id}));

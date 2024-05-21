@@ -5,6 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import '../datetimepicker/datetimepicker.css'
 export default function DateTimePickerField({onChangeEvent,val,label,col='col-33',id,isDisabled=false}) {
     const  onChangeHandler=(data,event)=>{
+      console.log('new Date:',data,new Date());
            onChangeEvent((pre)=>({...pre,[$('#'+id)[0].id]:data}));
            }
   return (

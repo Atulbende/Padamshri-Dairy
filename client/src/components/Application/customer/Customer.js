@@ -30,7 +30,7 @@ const EmployeeOptoins = [{ value: '1', label: 'Employee-1' },{ value: '2', label
 const MilkTypeOptoins = [{ value: 'Cow', label: 'Cow' },{ value: 'Buffalo', label: 'Buffalo' }];
 
 const actions=[{"title":'Save',"icon":'fa fa-check',"className":'btn-1',"action":saveHandle}];
-  return (
+  return ( 
     <>
       <ActionBar type={'Form'} actionsButton={actions}/>
       <div  className='content-form'><br/>

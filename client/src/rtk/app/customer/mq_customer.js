@@ -8,7 +8,6 @@ const mq_customer=apiSlice.injectEndpoints({
                     ({
                     url:app.customer.app_gridCustomers,
                     method:'GET'
-
                 }),
                 providesTags:['customers']
             }),

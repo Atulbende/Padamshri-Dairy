@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDom from 'react-dom';
 import '../dialog/dialog.css';
-import TextFields from '../text-field/TextFields' 
-import Button from '../button/Button';
-import Header from '../../layout/header/Header';
  export function Dialog({children,classes}) {
   return ReactDom.createPortal(
     <>  

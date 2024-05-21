@@ -21,7 +21,8 @@ module.exports={
         },
         dailysale:{
             app_gridDailyEntries:'app/getGridDailyEntries',
-            app_dailyEntriesSave:'app/dailyEntriesSave'
+            app_dailyEntriesSave:'app/dailyEntriesSave',
+            app_dailyEntriesDelete:'app/dailyEntriesDelete'
         },
          getkeywords:'app/keywords',
     }

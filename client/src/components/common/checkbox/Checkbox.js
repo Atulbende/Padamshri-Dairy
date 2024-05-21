@@ -1,4 +1,4 @@
-import React,{useCallback, useEffect, useMemo, useState} from 'react'
+import React,{useMemo} from 'react'
 import '../checkbox/checkbox.css'
 function Checkbox({id,list=[],value=[],onChangeEvent,col='col-15'}) {
   const handleCheckboxChange=(item)=>{
@@ -13,10 +13,9 @@ function Checkbox({id,list=[],value=[],onChangeEvent,col='col-15'}) {
  const SelectedItems=useMemo(()=>{
       return value
  },[value])
-
   return (
 <>
-    {list.map((item,index)=>{
+    {list.map((item)=>{
       const isChecked=SelectedItems.includes(item.id);
             return (<div key={item.id} className={`checkbox-wrapper-15 mx-2 ` + col}>
             <input  type="checkbox"  className="inp-cbx" checked={isChecked} id={item.id} onChange={()=>handleCheckboxChange(item.id)} />

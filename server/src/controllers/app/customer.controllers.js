@@ -10,7 +10,6 @@ const openCustomer=_async(async(req,res)=>{
    const _id=req?.body?.Pid; 
    if(_id===-1){
    const result = await  executeQuery(`SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME=? AND TABLE_SCHEMA = ?`,['customers',process.env.DATABASE_NAME]);
-   console.log('result:123',result)
    res.result=getNewObj(result)
    }else{
    const result = await  executeQuery(`SELECT Pid,CustomerName,MobileNo,FullAddress,MilkType,Qty,Rate,Balance,DeliveryBy,Timing,LastPaymentDate,Status FROM customers WHERE Pid=?;`,[_id]);
@@ -23,9 +22,7 @@ return res.send(new APIResponse(200,"loaded",{result:res.result,required:res.req
  const CustomerSave=_async(async(req,res)=>{
 try {
       const formData= req?.body;
-      console.log(':formData:',formData);
       const result = await  executeQuery('call SP_CustomerSave(?,@Per_Result);',[JSON.stringify(formData)]);
-      console.log('result:',result);
       const _msg =com_message(result[0].Per_Result);
       return res.send(new APIResponse(200,"done",{result:_msg}));
 } catch (error) {

@@ -1,20 +1,17 @@
-  import { React, memo, useEffect, useMemo, useRef, useState } from 'react'
+  import { React, memo,  useState } from 'react'
   import './actionbar.scss'
   import $ from 'jquery';
   import 'datatables.net-dt/js/dataTables.dataTables'
   import '../../common/loader/actionBtnLoader.css'
-  import Dialog from '../../common/dialog/Dialog'
-  import { useNavigate } from 'react-router-dom';
   import ConfirmationDialog from '../../common/confirmation-dialog/ConfirmationDialog';
   import { root } from '../../../services/root/root.js';
   import { useComDeleteMutation } from '../../../rtk/common/common.js';
-  function ActionBar({ ids, setIds, setRefresh, type, actionsButton, activity, tableName }) {
-    console.log('red:::ActionBar')
+  function ActionBar({GridId, ids, setIds, setRefresh, type, actionsButton, activity, tableName }) {
     const [comDelete]=useComDeleteMutation()
     const [isLoader,setIsLoader]=useState(false);
     const [actionToggle, setActionToggle] = useState('')
     const [isConfirm, setIsConfirm] = useState(false);
-    const table = $('#sampleTable').DataTable();
+    const table = $('#'+GridId).DataTable();
     const onActinBtn=async(_clickAction)=>{
       setIsLoader(true);
       await _clickAction();
@@ -24,9 +21,9 @@
       setRefresh(true);
     }
     function selectHandle() {
-      ids == 0 ? root.grid.selectAll() : root.grid.deselectAll();
+      ids === 0 ? root.grid.selectAll(GridId) : root.grid.deselectAll(GridId);
       console.log('PP:',root.grid.getSelectedIds());
-      setIds(root.grid.getSelectedIds())
+      setIds(root.grid.getSelectedIds(GridId))
     }
     function confirmatinYes(){
       setIsConfirm(true);

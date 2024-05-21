@@ -84,7 +84,7 @@ export default function Login() {
                     {/* <button type='button' className={buttonExtend} onClick={LoginCheck} >{loginLoading ? <span class="traditional"></span>:'LOGIN'}</button> */}
                     <LoginButton title="LOGIN" classes='login-btn'clickActions={LoginCheck} loader={loginLoading}/>
                     <LoginButton title="SIGN UP" classes='sign-up-btn'clickActions={clickOnSingup} />
-                    <span> <a href='www.google.com' target='_blank'>Forget Passowrd</a></span>
+                    <span> <a href='www.google.com' target='_blank'>Forget Password</a></span>
                 </section>
             </div>
             {/* Sign up page Design */}

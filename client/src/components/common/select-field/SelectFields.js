@@ -1,15 +1,11 @@
-import React, { useMemo, useState } from 'react'
+import React, { useMemo } from 'react'
 import Select from 'react-select'
 import '../select-field/selectfields.css'
 import {colourStyles} from './style.js'
 import {useCommonListQuery} from '../../../rtk/common/common.js'
-import {root} from '../../../services/root/root.js'
 export default function SelectFields({id,onChangeEvent,listKey,options=[],label,col,val,isDisabled=false}) {
-  // const [comOptions,setComOptions]=useState(options);
-// const {data,isLoading}=useCommonListQuery(listKey);
 const { data: listData,isLoading } =  useCommonListQuery(listKey,{skip:!listKey?true:false});
   const list=useMemo(()=>{
-    console.log("val:",listData?.data?.list)
     if(!!listKey && !isLoading){
       return listData?.data?.list;
     }else{

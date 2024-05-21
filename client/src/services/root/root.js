@@ -2,41 +2,41 @@ import $ from 'jquery'
 import { Screen } from '../../components/common/notifications/toastify';
 export const root={
             grid:{
-                init:async function(data,columns,Navigate,redirectTo,setIds){
-                    var table = $('#sampleTable').DataTable({ 'data': data, 'columns': columns, destroy: true});
-                    ($('#sampleTable.dataTable').find('tbody')).on('click', 'tr td', function (event) {
+                init:async function(id,data,columns,Navigate,redirectTo,setIds){
+                    var table = $(`#`+id).DataTable({ 'data': data, 'columns': columns, destroy: true});
+                    ($('#'+id+'.dataTable').find('tbody')).on('click', 'tr td', function (event) {
                       $(this).parent().toggleClass('selected');
                       var cellDT = table.cell(this).index();
-                      setIds(root.grid.getSelectedIds());
+                      setIds(root.grid.getSelectedIds(id));
                       if (cellDT) if (cellDT.column === 0) Navigate(redirectTo, { state: table.rows(this).data()[0]});
                     }); 
                 },
-                getSelectedIds: function(){
-                    var table = $('#sampleTable').DataTable();
+                getSelectedIds: function(id){
+                    var table = $(`#`+id).DataTable();
                     var items = $.map(table.rows('.selected').data(), function (item) {
                       return item.Pid;
                     }); return items;
                 },
-                getSelectedData: function(){
-                    var table = $('#sampleTable').DataTable();
+                getSelectedData: function(id){
+                    var table = $(`#`+id).DataTable();
                     var items = $.map(table.rows('.selected').data(), function (item) {
                       return item;
                     }); return items;
                 },
-                selectAll:function(){
-                    var table = $('#sampleTable').DataTable();
+                selectAll:function(id){
+                    var table = $(`#`+id).DataTable();
                     table.rows({page:'current'}).nodes().to$().addClass('selected');
                     var items = $.map(table.rows('.selected').data(), function (item) {
                       return item;
                     }); 
                     return items;
                 },
-                deselectAll:function(){
-                    var table=$('#sampleTable').DataTable();
+                deselectAll:function(id){
+                    var table=$('#'+id).DataTable();
                     table.rows( '.selected' ).nodes().to$().removeClass( 'selected' );
                 },
-                resetGrid:function(){
-                    ($('#sampleTable.dataTable').find('tbody')).on('click', 'tr td', function (event) {
+                resetGrid:function(id){
+                    ($(`#${id}.dataTable`).find('tbody')).on('click', 'tr td', function (event) {
                         $(this).parent().toggleClass('selected');
                       });
                 },
