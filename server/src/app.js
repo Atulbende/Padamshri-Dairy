@@ -24,10 +24,12 @@ app.use(express.static("public"));
 import userRouters from "./routers/user.router.js"
 import commonRouters from './routers/common.router.js'
 import appKeywordRouters from './routers/app/keyword.router.js'
-import appCustomerSave from './routers/app/customer.router.js';
+import appCustomer from './routers/app/customer.router.js';
+import appDailyEntries from './routers/app/daily_entries.router.js'
 app.use('/api/v1/user',userRouters);
 app.use('/api/v1/common',commonRouters)
 // Application Routers
 app.use('/api/v1/app',appKeywordRouters);
-app.use('/api/v1/app',appCustomerSave);
+app.use('/api/v1/app',appCustomer);
+app.use('/api/v1/app',appDailyEntries);
 export { app }

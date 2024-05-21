@@ -18,7 +18,10 @@ module.exports={
             app_gridCustomers:'app/getGridCustomers',
             app_customerSave:'app/customerSave',
             app_openCustomer:'app/openCustomer'
-
+        },
+        dailysale:{
+            app_gridDailyEntries:'app/getGridDailyEntries',
+            app_dailyEntriesSave:'app/dailyEntriesSave'
         },
          getkeywords:'app/keywords',
     }

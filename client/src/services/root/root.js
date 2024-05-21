@@ -63,6 +63,7 @@ export const root={
                     if(flag){
                     const res = await rtk({data:formObj});
                     if(res?.data?.data?.result?.id>0){
+                        sessionStorage.setItem('formObj',JSON.stringify(formObj));
                         Screen.Notification.Success(res?.data?.data?.result?.Msg,2000);
                     }else{
                         Screen.Notification.Warm(res?.data?.data?.result?.Msg,2000);
