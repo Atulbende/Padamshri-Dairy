@@ -27,7 +27,7 @@ export default function Roles() {
   const tableName='com_users'
   return (
     <>
-      {!isLoading && <Grid id='users' actions={actions}   redirectTo={redirectTo} columns={columns} data={data?.data?.usersGrids} activity={activity} tableName={tableName}></Grid>}
+      {!isLoading && <Grid id='users' actions={actions}   redirectTo={redirectTo}  data={{data:data?.data?.usersGrids,columns:columns}} activity={activity} tableName={tableName}></Grid>}
     </>
   )
   
