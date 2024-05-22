@@ -20,7 +20,7 @@ res.required=JSON.parse(requiredfields[0].FieldsArray.replace(/'/g, '"'));
 return res.send(new APIResponse(200,"loaded",{result:res.result,required:res.required}));
 })
  const CustomerSave=_async(async(req,res)=>{
-      console.log('_error',req,result)
+      console.log('_error',req)
 // try {
       const formData= req?.body;
       const result = await  executeQuery('call SP_CustomerSave(?,@Per_Result);',[JSON.stringify(formData)]);
