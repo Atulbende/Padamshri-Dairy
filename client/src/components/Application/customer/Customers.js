@@ -20,7 +20,7 @@ export default function Customers() {
         if(res?.data?.data?.result?.id==1){
               setIsConfirmation(false);
               root.grid.resetGrid('customers');
-              Screen.Notification.Success(Screen.Notification.Msg.Def5,1000);
+              Screen.Notification.Success(Screen.Notification.Msg.Def3,1000);
 
         }
       });
