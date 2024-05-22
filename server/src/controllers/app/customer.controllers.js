@@ -20,16 +20,13 @@ res.required=JSON.parse(requiredfields[0].FieldsArray.replace(/'/g, '"'));
 return res.send(new APIResponse(200,"loaded",{result:res.result,required:res.required}));
 })
  const CustomerSave=_async(async(req,res)=>{
-      console.log('_error',req)
-// try {
+try {
       const formData= req?.body;
       const result = await  executeQuery('call SP_CustomerSave(?,@Per_Result);',[JSON.stringify(formData)]);
-       
-
       const _msg =com_message(result[0].Per_Result);
       return res.send(new APIResponse(200,"done",{result:_msg}));
-// } catch (error) {
-//    console.log('_error',error)
-// }
+} catch (error) {
+   console.log('_error',error)
+}
  })
 export {CustomerSave,openCustomer,getGridCustomers}
