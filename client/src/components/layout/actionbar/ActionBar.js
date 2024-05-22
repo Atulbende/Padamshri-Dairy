@@ -21,8 +21,7 @@
       setRefresh(true);
     }
     function selectHandle() {
-      ids === 0 ? root.grid.selectAll(GridId) : root.grid.deselectAll(GridId);
-      console.log('PP:',root.grid.getSelectedIds());
+      ids.length === 0 ? root.grid.selectAll(GridId) : root.grid.deselectAll(GridId);
       setIds(root.grid.getSelectedIds(GridId))
     }
     function confirmatinYes(){
