@@ -19,10 +19,13 @@ const getNewObj=(_obj)=>{
 const com_message=(id)=>{
   return responseCodes.find((_v)=>Number(_v.id)===Number(id));
 }
-
+function formatDate(isoDateString) {
+  return isoDateString.split('T')[0];
+}
   export 
   {
     sanitizeResponse,
     getNewObj,
-    com_message
+    com_message,
+    formatDate
   }
