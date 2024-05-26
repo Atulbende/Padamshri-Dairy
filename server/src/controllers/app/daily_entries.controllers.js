@@ -1,16 +1,14 @@
 import executeQuery from "../../database/query.js";
 import { _async } from "../../utils/_async.js";
 import { APIResponse } from "../../utils/_response.js";
-import { com_message } from "../../utils/index.js";
+import { com_message ,formatDate} from "../../utils/index.js";
 const getGridDailyEntries=_async(async(req,res)=>{
     const newDate=formatDate(req?.body?.saleDate);
     const result=await executeQuery('select * from get_grid_daily_entry_vw where `date`=? ',[newDate]) || [];
     console.log("result:",result);
     return  res.send(new APIResponse(200,"Daily Entry Grid",{dailyEntryGrid:result}))
 });
-function formatDate(isoDateString) {
-    return isoDateString.split('T')[0];
-  }
+
 const DailyEntriesSave=_async(async(req,res)=>{
     const { deliveryDate, data } = req.body;
     // const result = await  executeQuery('call SP_CustomerSave(?,@Per_Result);',[JSON.stringify(formData)]);

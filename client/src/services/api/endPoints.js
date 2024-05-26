@@ -25,5 +25,6 @@ module.exports={
             app_dailyEntriesDelete:'app/dailyEntriesDelete'
         },
          getkeywords:'app/keywords',
+         getDashboard:'app/Dashboard'
     }
 }
