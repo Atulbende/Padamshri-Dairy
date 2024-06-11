@@ -13,7 +13,8 @@ const corsOptions = {
         'http://localhost:3002',
         'http://localhost:3000',
         'https://padamshri-dairy-git-master-atul-s-projects-b035b0ba.vercel.app',
-        'https://padamshri-dairy-p2896etdc-atul-s-projects-b035b0ba.vercel.app'
+        'https://padamshri-dairy-p2896etdc-atul-s-projects-b035b0ba.vercel.app',
+        'https://padamshri-dairy-obxrrsxxw-atul-s-projects-b035b0ba.vercel.app'
     ],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization', 'AppId'],
