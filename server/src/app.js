@@ -8,7 +8,16 @@ import setupSocketServer from './websockets/socketServer.js';
 const app = express();
 
 const corsOptions = {
-    origin: '*',
+    origin: [
+        'http://127.0.0.1:3000',
+        'http://localhost:3002',
+        'http://localhost:3000',
+        'https://padamshri-dairy-git-master-atul-s-projects-b035b0ba.vercel.app',
+        'https://padamshri-dairy-p2896etdc-atul-s-projects-b035b0ba.vercel.app',
+        'https://padamshri-dairy-obxrrsxxw-atul-s-projects-b035b0ba.vercel.app',
+        'https://padamshri-dairy.vercel.app/login',
+        'https://padamshri-dairy-o7m5mstb6-atul-s-projects-b035b0ba.vercel.app'
+    ],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization', 'AppId'],
     credentials: true
