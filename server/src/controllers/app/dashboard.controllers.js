@@ -7,7 +7,6 @@ const Dashboard=(_async(async(req,res)=>{
     const toDate=formatDate(req.body?.toDate);
     const result=await executeQuery('call SP_Dashboard(?,?) ',[fromDate,toDate]);
     return res.send (new APIResponse(200,"Dashboard",{result:result}));
-
 }))
 
 export {Dashboard}
