@@ -38,7 +38,7 @@ const setupSocketServer = (server, corsOptions) => {
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
-        }, 3000);
+        }, 1000);
 
         socket.on('disconnect', () => {
             console.log('WebSocket connection closed');
