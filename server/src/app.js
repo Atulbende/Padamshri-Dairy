@@ -15,8 +15,9 @@ const corsOptions = {
         'https://padamshri-dairy-git-master-atul-s-projects-b035b0ba.vercel.app',
         'https://padamshri-dairy-p2896etdc-atul-s-projects-b035b0ba.vercel.app',
         'https://padamshri-dairy-obxrrsxxw-atul-s-projects-b035b0ba.vercel.app',
-        'https://padamshri-dairy.vercel.app',
-        'https://padamshri-dairy-o7m5mstb6-atul-s-projects-b035b0ba.vercel.app'
+        'https://padamshri-dairy.vercel.app/login',
+        'https://padamshri-dairy-o7m5mstb6-atul-s-projects-b035b0ba.vercel.app',
+        'https://padamshri-dairy-git-master-atul-s-projects-b035b0ba.vercel.app'
     ],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization', 'AppId'],
