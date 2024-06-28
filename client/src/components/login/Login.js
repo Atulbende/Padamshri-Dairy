@@ -78,7 +78,7 @@ export default function Login() {
                 <section className='login-body'>
                     <h1>LOGIN</h1>                  
                     <input name="loginUserName" type='text' placeholder='User Name' autoComplete='false' onChange={LoginHandle}></input>
-                    <input onKeyPress={(e)=> {if(e.key==='Enter'){LoginCheck();}}}  name="loginPassword" type='password' placeholder='Passowrd' onChange={LoginHandle}></input>
+                    <input onKeyPress={(e)=> {if(e.key==='Enter'){LoginCheck();}}}  name="loginPassword" type='password' placeholder='password' onChange={LoginHandle}></input>
                 </section>
                 <section className='login-footer'>
                     {/* <button type='button' className={buttonExtend} onClick={LoginCheck} >{loginLoading ? <span class="traditional"></span>:'LOGIN'}</button> */}
@@ -96,7 +96,7 @@ export default function Login() {
                 <section className='login-body'>                 
                     <input name="Signup_Email" value={Signup.Signup_Email}  type='email' placeholder='Email' onChange={SignupsHandle}></input>
                     <input name="Signup_UserName" value={Signup.Signup_UserName} type='text' placeholder='User Name' onChange={SignupsHandle}></input>
-                    <input name="Signup_Password" value={Signup.Signup_Password} type='password' placeholder='Passowrd' onChange={SignupsHandle}></input>
+                    <input name="Signup_Password" value={Signup.Signup_Password} type='password' placeholder='password' onChange={SignupsHandle}></input>
                 </section>
                 <section className='login-footer'>
                     <LoginButton title="SIGN UP" classes='sign-up-btn'clickActions={SignUpSave} loader={singupLoading} />

@@ -1,6 +1,6 @@
 .container{
-    color: #eee;
-    background-color: var(--login);
+    color: var(--gradient-color);
+    background: var(--bg-gradient-color);
     height: 100vh;
     display: flex;
     justify-content:center;
@@ -14,7 +14,9 @@
     min-width:30rem;
     height: 50rem;
     min-height: 45rem;
-    background-color: white;
+    background-color: white!important;
+    background:url('../../assets/images/svg/login-content-bg.svg') no-repeat 0 100%;
+
     border-radius: 50px;
     box-shadow: inset  0 0px 30px 5px rgba(0, 0, 0, 0.3);
     z-index: 4;
@@ -50,7 +52,7 @@
     line-height: 3rem;
     /* max-height: 30%; */
     height: 30%;
-    background-color: var(--login);
+    background: var(--bg-gradient-color);
     box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.3);
     animation: title-box 10s linear infinite;
     border-bottom: 8px solid #9543aa;

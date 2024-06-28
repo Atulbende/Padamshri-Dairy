@@ -1,5 +1,7 @@
 .good-morning{
     transition: background-color 3s ease-in;
+    --bg-gradient-color:linear-gradient(223.82deg,#94009f -23.38%,#1d3181 104.9%);
+    --gradient-color:#e0e0e0;
     --bg-color: white ;
     --dialog:var(--bg-color);
     --hover:#ebe6e6;
